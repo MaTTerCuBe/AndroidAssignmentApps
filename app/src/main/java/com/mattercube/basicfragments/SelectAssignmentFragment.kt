@@ -1,13 +1,14 @@
 package com.mattercube.basicfragments
 
 import android.content.Context
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.select_assignment_fragment.*
 
 
@@ -33,7 +34,12 @@ class SelectAssignmentFragment : Fragment() {
 
         val assignment2Approve: TextView? = view?.findViewById(R.id.assignmnet_2_approve)
 
+        assignment2Approve?.setOnClickListener {
+            Log.i("SelAssFrag", "appTwoSelect about to be called.")
+            clickCheck.appTwoSelected()
+            Log.i("SelAssFrag", "appTwoSelect has been called.")
 
+        }
     }
 
     interface ApAssignmentClicks {
