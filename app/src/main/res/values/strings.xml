@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Basic Fragments</string>
+    <string name="roll_label">Roll</string>
+    <string name="ass_2">Assignment 2: Fragments</string>
+    <string name="approved">Approved</string>
+    <string name="not_approved">Not Approved</string>
+    <string name="approve_button">Press Here to approve the assignment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
