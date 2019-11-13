@@ -11,6 +11,7 @@ import android.widget.Button
 
 class ApproveAssignmentFragment : Fragment() {
 
+    private lateinit var checkClicks: Confirm
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,6 +21,26 @@ class ApproveAssignmentFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_approve_assignment, container, false)
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
 
+        checkClicks = context as Confirm
+
+        val passButton: Button? = view!!.findViewById(R.id.pass_button)
+        val denyButton: Button? = view!!.findViewById(R.id.fail_button)
+
+        passButton?.setOnClickListener{
+            checkClicks.approved()
+        }
+
+        denyButton?.setOnClickListener {
+            checkClicks.deneid()
+        }
+
+    }
+    interface Confirm {
+        fun approved()
+        fun deneid()
+    }
 
 }

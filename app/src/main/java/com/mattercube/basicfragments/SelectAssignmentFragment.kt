@@ -12,7 +12,9 @@ import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.select_assignment_fragment.*
 
 
-class SelectAssignmentFragment : Fragment() {
+class SelectAssignmentFragment : Fragment()
+    //, ApproveAssignmentFragment.Confirm
+{
 
     private lateinit var clickCheck: ApAssignmentClicks
 
@@ -42,6 +44,11 @@ class SelectAssignmentFragment : Fragment() {
         }
     }
 
+    /*override fun approved() {
+        Log.i("SelAssFragL", "trying to get color.")
+        assignmnet_2_approve.setTextColor(resources.getColor(R.color.approved))
+    }
+*/
     interface ApAssignmentClicks {
         fun appTwoSelected()
         fun returnHere()
