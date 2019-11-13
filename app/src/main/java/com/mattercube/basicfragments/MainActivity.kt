@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.select_assignment_fragment.*
 
+// @Author: R Khamov
 
 class MainActivity : AppCompatActivity(), SelectAssignmentFragment.ApAssignmentClicks,
     ApproveAssignmentFragment.Confirm {
@@ -32,10 +33,6 @@ class MainActivity : AppCompatActivity(), SelectAssignmentFragment.ApAssignmentC
             .addToBackStack(null)
             .commit()
         Log.i("MainActivity", "appTwoSelect has finished")
-    }
-
-    override fun returnHere() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun approved() {
