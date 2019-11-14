@@ -12,6 +12,9 @@
     <string name="font_style">Press these buttons to change Style!</string>
     <string name="font_size">Press these buttons to change Size!</string>
     <string name="font_color">Press these buttons to change Color!</string>
+    <string name="font_button_default">Default</string>
+    <string name="font_button_monospace">Monospace</string>
+    <string name="font_button_serif">Serif</string>
 
 
 

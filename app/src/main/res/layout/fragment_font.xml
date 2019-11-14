@@ -1,77 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FontFragment">
 
-    <TextView
-        android:id="@+id/font_fragment_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/font_title"
-        android:textSize="@dimen/header_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_marinTop="24dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
 
-    <TextView
-        android:id="@+id/font_fragment_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/font_description"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/font_fragment_title"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/font_fragment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/font_title"
+            android:textSize="@dimen/header_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_marinTop="24dp" />
 
-    <TextView
-        android:id="@+id/type_face_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/font_tye_face"
-        app:layout_constraintBottom_toTopOf="@+id/style_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/font_fragment_description"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/font_fragment_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/font_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/font_fragment_title" />
 
-    <TextView
-        android:id="@+id/style_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/font_style"
-        app:layout_constraintBottom_toTopOf="@+id/size_view"
-        app:layout_constraintStart_toStartOf="@+id/type_face_view"
-        app:layout_constraintTop_toBottomOf="@+id/type_face_view" />
+        <TextView
+            android:id="@+id/type_face_view"
+            android:layout_width="263dp"
+            android:layout_height="@dimen/three_button_fit"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/font_tye_face"
+            app:layout_constraintBottom_toTopOf="@+id/style_view"
+            app:layout_constraintEnd_toStartOf="@+id/default_button"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/font_fragment_description"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/size_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/font_size"
-        app:layout_constraintBottom_toTopOf="@+id/color_view"
-        app:layout_constraintStart_toStartOf="@+id/style_view"
-        app:layout_constraintTop_toBottomOf="@+id/style_view" />
+        <TextView
+            android:id="@+id/style_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/three_button_fit"
+            android:layout_marginTop="32dp"
+            android:text="@string/font_style"
+            app:layout_constraintBottom_toTopOf="@+id/size_view"
+            app:layout_constraintStart_toStartOf="@+id/type_face_view"
+            app:layout_constraintTop_toBottomOf="@+id/type_face_view" />
 
-    <TextView
-        android:id="@+id/color_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/font_color"
-        app:layout_constraintStart_toStartOf="@+id/size_view"
-        app:layout_constraintTop_toBottomOf="@+id/size_view" />
+        <TextView
+            android:id="@+id/size_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/three_button_fit"
+            android:layout_marginTop="32dp"
+            android:text="@string/font_size"
+            app:layout_constraintBottom_toTopOf="@+id/color_view"
+            app:layout_constraintStart_toStartOf="@+id/style_view"
+            app:layout_constraintTop_toBottomOf="@+id/style_view" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/color_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/three_button_fit"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/font_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/size_view"
+            app:layout_constraintTop_toBottomOf="@+id/size_view" />
+
+        <Button
+            android:id="@+id/default_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/font_button_default"
+            app:layout_constraintBottom_toTopOf="@+id/monospace_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/type_face_view"
+            app:layout_constraintTop_toTopOf="@+id/type_face_view" />
+
+        <Button
+            android:id="@+id/monospace_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_monospace"
+            app:layout_constraintBottom_toTopOf="@+id/serif_button"
+            app:layout_constraintStart_toStartOf="@+id/default_button"
+            app:layout_constraintTop_toBottomOf="@+id/default_button" />
+
+        <Button
+            android:id="@+id/serif_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_serif"
+            app:layout_constraintBottom_toBottomOf="@+id/type_face_view"
+            app:layout_constraintStart_toStartOf="@+id/default_button"
+            app:layout_constraintTop_toBottomOf="@+id/monospace_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

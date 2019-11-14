@@ -2,4 +2,7 @@
 <resources>
     <dimen name="main_header">48sp</dimen>
     <dimen name="header_2">24sp</dimen>
+    <dimen name="three_button_fit">150dp</dimen>
+    <dimen name="font_button">115dp</dimen>
+
 </resources>
