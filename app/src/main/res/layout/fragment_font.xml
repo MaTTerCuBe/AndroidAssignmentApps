@@ -42,6 +42,7 @@
             android:layout_marginEnd="16dp"
             android:background="@color/second_button"
             android:text="@string/font_tye_face"
+            android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/style_view"
             app:layout_constraintEnd_toStartOf="@+id/default_button"
             app:layout_constraintHorizontal_bias="0.0"
