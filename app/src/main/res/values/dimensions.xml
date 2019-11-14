@@ -4,5 +4,9 @@
     <dimen name="header_2">24sp</dimen>
     <dimen name="three_button_fit">150dp</dimen>
     <dimen name="font_button">115dp</dimen>
+    <dimen name="default_option_width">260dp</dimen>
+    <dimen name="approve_view_width">100dp</dimen>
+    <dimen name="approve_view_height">30dp</dimen>
+
 
 </resources>

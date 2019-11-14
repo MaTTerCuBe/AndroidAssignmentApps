@@ -34,6 +34,7 @@ class SelectAssignmentFragment : Fragment() {
         clickCheck = context as ApAssignmentClicks
 
         val assignment2Approve: TextView? = view?.findViewById(R.id.assignmnet_2_approve)
+        val assignment3Link: TextView? = view?.findViewById(R.id.assignment_3)
 
         assignment2Approve?.setOnClickListener {
             Log.i("SelAssFrag", "appTwoSelect about to be called.")
@@ -41,9 +42,17 @@ class SelectAssignmentFragment : Fragment() {
             Log.i("SelAssFrag", "appTwoSelect has been called.")
 
         }
+
+        assignment3Link?.setOnClickListener {
+            Log.i("SelAssFrag", "assThreeSelected about to be called.")
+            clickCheck.assThreeSelected()
+            Log.i("SelAssFrag", "assThreeSelected has been called.")
+
+        }
     }
 
     interface ApAssignmentClicks {
         fun appTwoSelected()
+        fun assThreeSelected()
     }
 }

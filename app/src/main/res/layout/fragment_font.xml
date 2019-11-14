@@ -21,8 +21,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_marinTop="24dp" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/font_fragment_description"
@@ -36,11 +35,12 @@
 
         <TextView
             android:id="@+id/type_face_view"
-            android:layout_width="263dp"
+            android:layout_width="@dimen/default_option_width"
             android:layout_height="@dimen/three_button_fit"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
+            android:background="@color/second_button"
             android:text="@string/font_tye_face"
             app:layout_constraintBottom_toTopOf="@+id/style_view"
             app:layout_constraintEnd_toStartOf="@+id/default_button"
@@ -51,9 +51,10 @@
 
         <TextView
             android:id="@+id/style_view"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/default_option_width"
             android:layout_height="@dimen/three_button_fit"
             android:layout_marginTop="32dp"
+            android:background="@color/second_button"
             android:text="@string/font_style"
             app:layout_constraintBottom_toTopOf="@+id/size_view"
             app:layout_constraintStart_toStartOf="@+id/type_face_view"
@@ -61,20 +62,22 @@
 
         <TextView
             android:id="@+id/size_view"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/default_option_width"
             android:layout_height="@dimen/three_button_fit"
             android:layout_marginTop="32dp"
+            android:background="@color/second_button"
             android:text="@string/font_size"
             app:layout_constraintBottom_toTopOf="@+id/color_view"
-            app:layout_constraintStart_toStartOf="@+id/style_view"
+            app:layout_constraintStart_toStartOf="@+id/type_face_view"
             app:layout_constraintTop_toBottomOf="@+id/style_view" />
 
         <TextView
             android:id="@+id/color_view"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/default_option_width"
             android:layout_height="@dimen/three_button_fit"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"
+            android:background="@color/second_button"
             android:text="@string/font_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/size_view"
@@ -110,6 +113,89 @@
             app:layout_constraintBottom_toBottomOf="@+id/type_face_view"
             app:layout_constraintStart_toStartOf="@+id/default_button"
             app:layout_constraintTop_toBottomOf="@+id/monospace_button" />
+
+        <Button
+            android:id="@+id/normal_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_normal"
+            app:layout_constraintBottom_toTopOf="@+id/bold_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/default_button"
+            app:layout_constraintTop_toTopOf="@+id/style_view" />
+
+        <Button
+            android:id="@+id/bold_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_bold"
+            app:layout_constraintBottom_toTopOf="@+id/italic_button"
+            app:layout_constraintStart_toStartOf="@+id/normal_button"
+            app:layout_constraintTop_toBottomOf="@+id/normal_button" />
+
+        <Button
+            android:id="@+id/italic_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_italic"
+            app:layout_constraintBottom_toBottomOf="@+id/style_view"
+            app:layout_constraintStart_toStartOf="@+id/normal_button"
+            app:layout_constraintTop_toBottomOf="@+id/bold_button" />
+
+        <Button
+            android:id="@+id/small_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_small"
+            app:layout_constraintBottom_toTopOf="@+id/medium_button"
+            app:layout_constraintStart_toStartOf="@+id/default_button"
+            app:layout_constraintTop_toTopOf="@+id/size_view" />
+
+        <Button
+            android:id="@+id/medium_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_medium"
+            app:layout_constraintBottom_toTopOf="@+id/large_button"
+            app:layout_constraintStart_toStartOf="@+id/small_button"
+            app:layout_constraintTop_toBottomOf="@+id/small_button" />
+
+        <Button
+            android:id="@+id/large_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_large"
+            app:layout_constraintBottom_toBottomOf="@+id/size_view"
+            app:layout_constraintStart_toStartOf="@+id/small_button"
+            app:layout_constraintTop_toBottomOf="@+id/medium_button" />
+
+        <Button
+            android:id="@+id/black_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_black"
+            app:layout_constraintBottom_toTopOf="@+id/green_button"
+            app:layout_constraintStart_toStartOf="@+id/default_button"
+            app:layout_constraintTop_toTopOf="@+id/color_view" />
+
+        <Button
+            android:id="@+id/green_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_green"
+            app:layout_constraintBottom_toTopOf="@+id/red_button"
+            app:layout_constraintStart_toStartOf="@+id/black_button"
+            app:layout_constraintTop_toBottomOf="@+id/black_button" />
+
+        <Button
+            android:id="@+id/red_button"
+            android:layout_width="@dimen/font_button"
+            android:layout_height="wrap_content"
+            android:text="@string/font_button_red"
+            app:layout_constraintBottom_toBottomOf="@+id/color_view"
+            app:layout_constraintStart_toStartOf="@+id/black_button"
+            app:layout_constraintTop_toBottomOf="@+id/green_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

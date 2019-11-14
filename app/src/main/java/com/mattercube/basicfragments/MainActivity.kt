@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity(), SelectAssignmentFragment.ApAssignmentC
 
     private val selectAssignmentFragment = SelectAssignmentFragment()
     private val approveAssignmentFragment = ApproveAssignmentFragment()
+    private val selectAssignmentFont = FontFragment()
     private val manager = supportFragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +34,13 @@ class MainActivity : AppCompatActivity(), SelectAssignmentFragment.ApAssignmentC
             .addToBackStack(null)
             .commit()
         Log.i("MainActivity", "appTwoSelect has finished")
+    }
+
+    override fun assThreeSelected() {
+        manager.beginTransaction()
+            .replace(R.id.selectAssignmentFragment, selectAssignmentFont)
+            .addToBackStack(null)
+            .commit()
     }
 
     override fun approved() {

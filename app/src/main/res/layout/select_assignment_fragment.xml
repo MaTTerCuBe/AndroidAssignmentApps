@@ -7,6 +7,8 @@
     android:background="@color/colorPrimary"
     android:orientation="vertical">
 
+
+
     <TextView
         android:id="@+id/main_header"
         android:layout_width="wrap_content"
@@ -21,35 +23,53 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/assignment_3"
+        android:layout_width="@dimen/default_option_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/second_button"
+        android:text="@string/ass_3"
+        android:textSize="@dimen/header_2"
+        app:layout_constraintStart_toStartOf="@+id/assignment_2"
+        app:layout_constraintTop_toBottomOf="@+id/assignment_2" />
+
+    <TextView
+        android:id="@+id/assignment_2"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
         android:layout_marginTop="24dp"
         android:background="@color/second_button"
         android:text="@string/ass_2"
         android:textSize="@dimen/header_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/assignmnet_2_approve"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_header" />
 
     <TextView
         android:id="@+id/assignmnet_2_approve"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/approve_view_width"
+        android:layout_height="@dimen/approve_view_height"
         android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
         android:background="@color/not_approved"
         android:text="@string/not_approved"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintBottom_toBottomOf="@+id/assignment_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintStart_toEndOf="@+id/assignment_2"
+        app:layout_constraintTop_toTopOf="@+id/assignment_2" />
+
+    <TextView
+        android:id="@+id/assignmnet_3_approve"
+        android:layout_width="@dimen/approve_view_width"
+        android:layout_height="@dimen/approve_view_height"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/not_approved"
+        android:text="@string/not_approved"
+        app:layout_constraintBottom_toBottomOf="@+id/assignment_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/assignment_3"
+        app:layout_constraintTop_toTopOf="@+id/assignment_3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

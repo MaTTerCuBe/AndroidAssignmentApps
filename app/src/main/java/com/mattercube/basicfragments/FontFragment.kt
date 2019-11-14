@@ -19,5 +19,9 @@ class FontFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_font, container, false)
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
 
+
+    }
 }
