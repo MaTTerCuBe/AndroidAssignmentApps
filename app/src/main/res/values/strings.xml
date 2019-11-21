@@ -26,6 +26,10 @@
     <string name="font_button_green">Green</string>
     <string name="font_button_red">Red</string>
 
+    <string name="app_description_text">This app is a collage of class assignments packaged into separate fragments.  Select an assignment to go navigate to its fragment.  Select the adjacent \'not approved\' button to change the approval status of each assignment.  Also, try pressing the buttons below to complete the initial in class exersice!</string>
+    <string name="help_hide_button">Hide Text</string>
+    <string name="help_color_button">Change Color</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

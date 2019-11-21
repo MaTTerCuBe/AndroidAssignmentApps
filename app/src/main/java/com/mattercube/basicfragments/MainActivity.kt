@@ -3,6 +3,8 @@ package com.mattercube.basicfragments
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import kotlinx.android.synthetic.main.select_assignment_fragment.*
 
 // @Author: R Khamov
@@ -25,6 +27,19 @@ class MainActivity : AppCompatActivity(), SelectAssignmentFragment.ApAssignmentC
             .add(R.id.mainFragmentArea, selectAssignmentFragment)
             .commit()
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.help_button -> {
+            // do stuff
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
     }
 
     override fun approveSelected() {
