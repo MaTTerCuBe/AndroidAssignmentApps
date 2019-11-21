@@ -2,6 +2,7 @@ package com.mattercube.basicfragments
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -27,8 +28,9 @@ class HelpFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        
+
         var isHidden = false
+        var coolColor = false
 
         hide_button.setOnClickListener {
             if (!isHidden) {
@@ -39,6 +41,22 @@ class HelpFragment : Fragment() {
             else {
                 app_description.visibility = View.VISIBLE
                 isHidden = false
+            }
+        }
+
+        background_button.setOnClickListener {
+            if (!coolColor) {
+
+                Log.i("HelpTest", "coolColor was false")
+                help_layout.setBackgroundColor(resources.getColor(R.color.colorPrimaryDark))
+                coolColor = true
+            }
+
+            else {
+                Log.i("HelpTest", "coolColor was True")
+
+                help_layout.setBackgroundColor(resources.getColor(R.color.colorPrimary))
+                coolColor = false
             }
         }
     }
