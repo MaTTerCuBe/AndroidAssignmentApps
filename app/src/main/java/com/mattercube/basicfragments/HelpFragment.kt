@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.RenderProcessGoneDetail
+import android.widget.TextView
+import kotlinx.android.synthetic.main.fragment_help.*
 
 class HelpFragment : Fragment() {
 
@@ -22,4 +25,21 @@ class HelpFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_help, container, false)
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        
+        var isHidden = false
+
+        hide_button.setOnClickListener {
+            if (!isHidden) {
+                app_description.visibility = View.INVISIBLE
+                isHidden = true
+            }
+
+            else {
+                app_description.visibility = View.VISIBLE
+                isHidden = false
+            }
+        }
+    }
 }

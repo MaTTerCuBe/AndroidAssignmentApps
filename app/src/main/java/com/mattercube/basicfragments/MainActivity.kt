@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity(), SelectAssignmentFragment.ApAssignmentC
     private val selectAssignmentFragment = SelectAssignmentFragment()
     private val approveAssignmentFragment = ApproveAssignmentFragment()
     private val selectAssignmentFont = FontFragment()
+    private val helpFragment = HelpFragment()
     private val manager = supportFragmentManager
 
     var whichThingy: Int = 0
@@ -36,7 +37,12 @@ class MainActivity : AppCompatActivity(), SelectAssignmentFragment.ApAssignmentC
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         R.id.help_button -> {
-            // do stuff
+
+            manager.beginTransaction()
+                .replace(R.id.mainFragmentArea, helpFragment)
+                .addToBackStack(null)
+                .commit()
+
             true
         }
         else -> super.onOptionsItemSelected(item)
