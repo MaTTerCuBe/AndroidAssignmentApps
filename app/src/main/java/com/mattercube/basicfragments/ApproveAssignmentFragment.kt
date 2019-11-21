@@ -17,7 +17,6 @@ class ApproveAssignmentFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.i("AppAssFrag", "We about to inflate view")
         return inflater.inflate(R.layout.fragment_approve_assignment, container, false)
     }
 
@@ -34,13 +33,13 @@ class ApproveAssignmentFragment : Fragment() {
         }
 
         denyButton?.setOnClickListener {
-            checkClicks.deneid()
+            checkClicks.denied()
         }
 
     }
     interface Confirm {
         fun approved()
-        fun deneid()
+        fun denied()
     }
 
 }
