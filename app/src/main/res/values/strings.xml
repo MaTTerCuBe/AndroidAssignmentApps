@@ -31,7 +31,7 @@
     <string name="help_hide_button">Hide Text</string>
     <string name="help_color_button">Change Color</string>
 
-    <string name="intent_title">Assignment 4: Intents</string>
+    <string name="intent_title">Assignment 4: Intents and User Experience</string>
     <string name="intent_description">Press the buttons below to launch the companion app and change the fonts and texts below!</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

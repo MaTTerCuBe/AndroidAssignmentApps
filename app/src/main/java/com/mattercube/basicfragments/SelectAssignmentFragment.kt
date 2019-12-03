@@ -20,7 +20,9 @@ class SelectAssignmentFragment : Fragment() {
 
     public var assignment2Approve: TextView? = null
     public var assignment3Approve: TextView? = null
+
     var assignment3Link: TextView?    = null
+    var assignment4Link: TextView?    = null
 
     companion object {
         fun newInstance() = SelectAssignmentFragment()
@@ -41,6 +43,7 @@ class SelectAssignmentFragment : Fragment() {
         assignment2Approve = view?.findViewById(R.id.assignmnet_2_approve)
         assignment3Approve = view?.findViewById(R.id.assignmnet_3_approve)
         assignment3Link = view?.findViewById(R.id.assignment_3)
+        assignment4Link = view?.findViewById(R.id.assignment_4)
 
         assignment2Approve?.setOnClickListener {
             whichApprove = 2
@@ -60,6 +63,9 @@ class SelectAssignmentFragment : Fragment() {
             clickCheck.assThreeSelected()
         }
 
+        assignment4Link?.setOnClickListener {
+            clickCheck.assFourSelected()
+        }
 
     }
 
@@ -113,5 +119,6 @@ class SelectAssignmentFragment : Fragment() {
     interface ApAssignmentClicks {
         fun approveSelected()
         fun assThreeSelected()
+        fun assFourSelected()
     }
 }

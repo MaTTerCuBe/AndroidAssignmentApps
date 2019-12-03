@@ -22,16 +22,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/assignment_3"
-        android:layout_width="@dimen/default_option_width"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@color/second_button"
-        android:text="@string/ass_3"
-        android:textSize="@dimen/header_2"
-        app:layout_constraintStart_toStartOf="@+id/assignment_2"
-        app:layout_constraintTop_toBottomOf="@+id/assignment_2" />
 
     <TextView
         android:id="@+id/assignment_2"
@@ -44,6 +34,28 @@
         android:textSize="@dimen/header_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_header" />
+
+    <TextView
+        android:id="@+id/assignment_3"
+        android:layout_width="@dimen/default_option_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/second_button"
+        android:text="@string/ass_3"
+        android:textSize="@dimen/header_2"
+        app:layout_constraintStart_toStartOf="@+id/assignment_2"
+        app:layout_constraintTop_toBottomOf="@+id/assignment_2" />
+
+    <TextView
+        android:id="@+id/assignment_4"
+        android:layout_width="@dimen/default_option_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/second_button"
+        android:text="@string/intent_title"
+        android:textSize="@dimen/header_2"
+        app:layout_constraintStart_toStartOf="@+id/assignment_3"
+        app:layout_constraintTop_toBottomOf="@+id/assignment_3" />
 
     <TextView
         android:id="@+id/assignmnet_2_approve"

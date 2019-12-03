@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity(), SelectAssignmentFragment.ApAssignmentC
     private val approveAssignmentFragment = ApproveAssignmentFragment()
     private val selectAssignmentFont = FontFragment()
     private val helpFragment = HelpFragment()
+    private val selectAssignmentInents = IntentsFragment()
     private val manager = supportFragmentManager
 
     var whichThingy: Int = 0
@@ -59,6 +60,13 @@ class MainActivity : AppCompatActivity(), SelectAssignmentFragment.ApAssignmentC
     override fun assThreeSelected() {
         manager.beginTransaction()
             .replace(R.id.mainFragmentArea, selectAssignmentFont)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun assFourSelected() {
+        manager.beginTransaction()
+            .replace(R.id.mainFragmentArea, selectAssignmentInents)
             .addToBackStack(null)
             .commit()
     }
