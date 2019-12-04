@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Basic Fragments</string>
+    <string name="app_name">Assignment Compilation</string>
     <string name="roll_label">Roll</string>
     <string name="ass_2">Assignment 2: Fragments</string>
     <string name="ass_3">Assignment 3: Font Chooser</string>
