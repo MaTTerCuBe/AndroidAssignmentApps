@@ -30,4 +30,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/intent_fragment_title" />
 
+    <TextView
+        android:id="@+id/sample_one_view"
+        android:layout_width="@dimen/default_option_width"
+        android:layout_height="@dimen/three_button_fit"
+        android:layout_marginTop="24dp"
+        android:background="@color/second_button"
+        android:text="@string/intent_default_message"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intent_fragment_description" />
+
+    <TextView
+        android:id="@+id/sample_two_view"
+        android:layout_width="@dimen/default_option_width"
+        android:layout_height="@dimen/three_button_fit"
+        android:layout_marginTop="24dp"
+        android:background="@color/second_button"
+        android:text="@string/intent_default_message"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sample_one_view" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
