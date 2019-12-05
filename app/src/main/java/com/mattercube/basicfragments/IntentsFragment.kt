@@ -84,7 +84,7 @@ class IntentsFragment : Fragment() {
             //viewCode.typeface = Typeface.DEFAULT
             viewCode?.setTypeface(viewCode.typeface, Typeface.BOLD)
             viewCode?.setTextColor(resources.getColor(R.color.not_approved))
-            //viewCode.setTypeface(viewCode.null, android.graphics.Typeface.BOLD)
+            viewCode?.text = getString(R.string.style_one_text)
             //viewCode.setTypeface(null, 2)
         }
 
@@ -92,11 +92,13 @@ class IntentsFragment : Fragment() {
             //viewCode.typeface = Typeface.DEFAULT
             viewCode?.setTypeface(viewCode.typeface, Typeface.ITALIC)
             viewCode?.setTextColor(resources.getColor(R.color.approved))
+            viewCode?.text = getString(R.string.style_two_text)
         }
 
         else {
             viewCode?.setTypeface(viewCode.typeface, Typeface.BOLD_ITALIC)
             viewCode?.setTextColor(resources.getColor(R.color.colorPrimaryDark))
+            viewCode?.text = getString(R.string.style_three_text)
         }
 
     }

@@ -35,5 +35,8 @@
     <string name="intent_description">Press the buttons below to launch the companion app and change the fonts and texts below!</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="intent_default_message">Press here to initiate the companion app in order to change this font!</string>
+    <string name="style_one_text">This style is Bold, and has the "un-approved" color.  Press again to change the style to a different one!</string>
+    <string name="style_two_text">This style is Italic, and has the "approved" color.  Press again to change the style to a different one!</string>
+    <string name="style_three_text">This style is Bold Italic, and has the "accent" color.  Press again to change the style to a different one!</string>
 
 </resources>
