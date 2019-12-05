@@ -19,12 +19,7 @@ private const val EXTRA_FONT_VALUE = "com.mattercube.basicfragments.FONT_VALUE"
 
 class IntentsFragment : Fragment() {
 
-    // defining our text views
-    //val sampleOne: TextView? = view?.findViewById(R.id.sample_one_view)
-    private var sampleTwo: TextView? = null
-
     private var fontValue: Int? = 0;  // The companion App will change this value, and result in different fonts
-
     private var viewChosen: Int? = 0    // Which view's button was pressed
 
     override fun onCreateView(
@@ -37,12 +32,6 @@ class IntentsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-        val defaultFace = android.graphics.Typeface.DEFAULT
-
-        // Assigning TextViews by finding them in our XML layout
-        //val sampleOne: TextView? = view?.findViewById(R.id.sample_one_view)
-        sampleTwo = view?.findViewById(R.id.sample_two_view)
 
         // Setting request code values, these will be used with each text view.
         val REQUEST_ONE = 1
@@ -57,17 +46,10 @@ class IntentsFragment : Fragment() {
 
         }
 
-        sampleTwo?.setOnClickListener {
+        sample_two_view?.setOnClickListener {
             changeFont(REQUEST_TWO)
-            //
+            viewChosen = 2
         }
-
-        fun applyFont(fontCode: Int, viewCode: TextView) {
-            when (fontCode == 1) {
-
-            }
-        }
-
     }
 
     // Function to send our intent
@@ -89,37 +71,33 @@ class IntentsFragment : Fragment() {
         Log.i("Intent check", "fontValue should be 1, actually is: $fontValue")
 
         if (viewChosen == 1) {
-
-            if (fontValue == 1) {
-
-                Log.i("Intent check", "In if block for value of 1")
-
-                applyFont2(sample_one_view)
-                //sample_one_view.setTypeface(null, Typeface.BOLD)
-                //sampleOne?.setTypeface(sampleOne.typeface, Typeface.MONOSPACE)
-                //sample_one_view.setTextColor(resources.getColor(R.color.not_approved))
-            }
-
-            else if (fontValue == 2) {
-
-                Log.i("Intent check", "In if block for value of 1")
-
-                applyFont2(sample_one_view)
-                //sample_one_view.setTypeface(null, Typeface.BOLD)
-                //sampleOne?.setTypeface(sampleOne.typeface, Typeface.MONOSPACE)
-                //sample_one_view.setTextColor(resources.getColor(R.color.not_approved))
-            }
+            applyFont(sample_one_view, fontValue)
+        }
+        else if (viewChosen == 2) {
+            applyFont(sample_two_view, fontValue)
         }
     }
 
-    fun applyFont2(viewCode: TextView?, fontCode: Int) {
+    fun applyFont(viewCode: TextView?, fontCode: Int?) {
 
-
+        if (fontCode == 1) {
             //viewCode.typeface = Typeface.DEFAULT
-        viewCode?.setTypeface(viewCode.typeface, Typeface.BOLD)
-        viewCode?.setTextColor(resources.getColor(R.color.not_approved))
+            viewCode?.setTypeface(viewCode.typeface, Typeface.BOLD)
+            viewCode?.setTextColor(resources.getColor(R.color.not_approved))
             //viewCode.setTypeface(viewCode.null, android.graphics.Typeface.BOLD)
             //viewCode.setTypeface(null, 2)
+        }
+
+        else if (fontCode == 2) {
+            //viewCode.typeface = Typeface.DEFAULT
+            viewCode?.setTypeface(viewCode.typeface, Typeface.ITALIC)
+            viewCode?.setTextColor(resources.getColor(R.color.approved))
+        }
+
+        else {
+            viewCode?.setTypeface(viewCode.typeface, Typeface.BOLD_ITALIC)
+            viewCode?.setTextColor(resources.getColor(R.color.colorPrimaryDark))
+        }
 
     }
 }
