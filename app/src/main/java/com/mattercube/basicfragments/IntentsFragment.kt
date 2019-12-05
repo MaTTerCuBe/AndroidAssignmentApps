@@ -9,12 +9,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
+private const val ACTION_RETRIEVE_FONT = "com.mattercube.basicfragments.RETRIEVE_FONT"
 
 class IntentsFragment : Fragment() {
 
     // defining our text views
     private var sampleOne: TextView? = null
     private var sampleTwo: TextView? = null
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,7 +46,7 @@ class IntentsFragment : Fragment() {
         // Function to send our intent
         fun changeFont() {
 
-            val fontIntent = Intent(msud.cs3013.ACTION_RETRIEVE_FONT)
+            val fontIntent = Intent(ACTION_RETRIEVE_FONT)
         }
     }
 }
